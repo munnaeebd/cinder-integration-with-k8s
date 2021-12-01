@@ -57,3 +57,16 @@ metadata:
   name: cinder-sc
 provisioner: cinder.csi.openstack.org
 ~~~
+
+## For Specific Type Volume like SSD
+
+~~~
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  name: cinder-sc
+provisioner: cinder.csi.openstack.org
+parameters:
+  type: SF-SSD
+~~~
+
